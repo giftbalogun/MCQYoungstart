@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>MCQYoungstar Interview</title>
+    <link rel="shortcut icon" type="image/ico" href="https://youngstarsfoundation.org/img/favicon.ico">
+
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="core.css">
+</head>
+
+<body>
+    <div id="container">
+        <p id="hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <div id="start">Start Quiz!</div>
+        <div id="quiz" style="display: none">
+            <p>Instructions: Read the passage and answer the question based on it.</p>
+            <p>Nature writing is nonfiction or fiction prose or poetry about the natural environment. Nature writing
+                encompasses a wide variety of works, ranging from those that place primary emphasis on natural history
+                facts (such as field guides) to those in which philosophical interpretation predominate. It includes
+                natural history essays, poetry, essays of solitude or escape, as well as travel and adventure writing.
+
+                Nature writing often draws heavily on scientific information and facts about the natural world; at the
+                same time, it is frequently written in the first person and incorporates personal observations of and
+                philosophical reflections upon nature.
+
+                Modern nature writing traces its roots to the works of natural history that were popular in the second
+                half of the 18th century and throughout the 19th. An important early figure was the "parson-naturalist"
+                Gilbert White (1720 – 1793), a pioneering English naturalist and ornithologist. He is best known for his
+                Natural History and Antiquities of Selborne (1789).
+            </p>
+            <div id="questions-frame">
+                <p>Frame</p>
+                <div id="question"></div>
+                <div id="choices">
+                    <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                    <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                    <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                    <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+                </div>
+            </div>
+            <div class="timer-frame">
+                <div id="timer">
+                    <div id="counter"></div>
+                    <div id="btimeGauge"></div>
+                    <div id="timeGauge"></div>
+                </div>
+                <div id="progress"></div>
+            </div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
