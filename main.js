@@ -57,7 +57,7 @@ let questions = [{
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
-const questionTime = 5; // Question Time 5s
+const questionTime = 30; // Question Time 30s
 const gaugeWidth = 150; // Question Time Progess Bar With150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
@@ -94,7 +94,7 @@ function renderProgress() {
     }
 }
 
-// TQuestion Time Counter
+// Question Time Counter
 function renderCounter() {
     if (count <= questionTime) {
         counter.innerHTML = count;
@@ -118,12 +118,12 @@ function renderCounter() {
 // Check Answers
 function checkAnswer(answer) {
     if (answer == questions[runningQuestion].correct) {
-        // answer is correct
+        // Correct Answer
         score++;
         // change progress color to green
         answerIsCorrect();
     } else {
-        // answer is wrong
+        // Wrong Answer
         // change progress color to red
         answerIsWrong();
     }
@@ -157,12 +157,10 @@ function scoreRender() {
 
     // choose the stage based on the scorePerCent
     let stage =
-        (scorePerCent >= 80) ? "Nice Work, Very Super Good" :
-
-        (scorePerCent >= 60) ? "Very Good Try Harder" :
-        (scorePerCent >= 40) ? "Nice Working Try" :
-        (scorePerCent >= 20) ? "Poor Result, Try Next Time" :
-        (scorePerCent >= 10) ? "Why did you not make an attempt" :
+        (scorePerCent >= 80) ? "Nice Work, You Passed" :
+        (scorePerCent >= 60) ? "Very Good but Failed" :
+        (scorePerCent >= 40) ? "Nice Try but Failed" :
+        (scorePerCent >= 20) ? "Poor Result, Failed" :
         "Why did you not make an attempt";;
 
     scoreDiv.innerHTML = "<h3>" + stage + "</h3>";
